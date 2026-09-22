@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #0B0F0D;
+    --bg-secondary: #111713;
+    --surface: #171D18;
+    --surface-light: #202720;
+    --accent: #D8FF3E;
+    --accent-dark: #A8C72D;
+    --text-main: #F4F5F1;
+    --text-muted: #A7AEA5;
+    --border-subtle: rgba(255, 255, 255, 0.10);
+    --warning: #E3A83B;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #0B0F0D;
+    color: #F4F5F1;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Manrope', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  .font-mono-tech {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Engineering Topo and Grid overlays */
+.bg-topo-pattern {
+  background-image: radial-gradient(rgba(216, 255, 62, 0.08) 1px, transparent 1px),
+                    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px, 64px 64px, 64px 64px;
+}
+
+.bg-radial-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(216, 255, 62, 0.08) 0%, rgba(11, 15, 13, 0) 70%);
+}
+
+/* Subtle crosshair and technical stamp markings */
+.corner-bracket {
+  position: relative;
+}
+.corner-bracket::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #D8FF3E;
+  border-left: 2px solid #D8FF3E;
+}
+.corner-bracket::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid #D8FF3E;
+  border-right: 2px solid #D8FF3E;
+}
+
+/* Accessibility reduced motion compliance (PRD Section 29) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

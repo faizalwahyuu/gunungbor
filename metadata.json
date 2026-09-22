@@ -1,0 +1,6 @@
+{
+  "name": "TERRADRILL - Spesialis Pengeboran Gunung & Medan Ekstrem",
+  "description": "Jasa pengeboran profesional untuk gunung, batuan keras, geoteknik, eksplorasi, core drilling, dan medan sulit di Indonesia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
